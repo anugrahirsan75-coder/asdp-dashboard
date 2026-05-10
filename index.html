@@ -725,7 +725,11 @@ function setApiStatus(state, text) {
 async function apiFetch(params) {
   var url = new URL(API_BASE);
   Object.keys(params).forEach(function(k){ url.searchParams.set(k, params[k]); });
-  var res  = await fetch(url.toString());
+  var res = await fetch(url.toString(), {
+    redirect: 'follow',
+    mode: 'cors',
+    credentials: 'omit'
+  });
   if (!res.ok) throw new Error('HTTP ' + res.status);
   return await res.json();
 }
