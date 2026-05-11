@@ -21,7 +21,6 @@
   }
   *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
   body { font-family:'Plus Jakarta Sans',system-ui,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; font-size:14px; line-height:1.5; }
-
   .top-bar { background:linear-gradient(135deg,var(--navy),var(--navy-2)); color:#fff; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 12px rgba(0,0,0,0.15); position:sticky; top:0; z-index:50; }
   .top-bar .brand { display:flex; align-items:center; gap:12px; }
   .top-bar .brand-mark { width:40px; height:40px; background:#fff; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:800; color:var(--green); font-size:11px; }
@@ -33,15 +32,12 @@
   .btn-refresh { background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.18); width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.15s; }
   .btn-refresh:hover { background:rgba(255,255,255,0.2); }
   .btn-refresh svg { width:15px; height:15px; stroke:#fff; fill:none; stroke-width:2; }
-
-  /* ── API STATUS BADGE ── */
   .api-status { display:flex; align-items:center; gap:6px; padding:5px 10px; border-radius:99px; font-size:11px; font-weight:700; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); }
   .api-status .dot { width:7px; height:7px; border-radius:50%; background:#6b7a85; }
   .api-status.ok .dot   { background:#4ade80; }
   .api-status.err .dot  { background:#f87171; }
   .api-status.load .dot { background:#fbbf24; animation:blink 1s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
   .main-tab-bar { background:var(--card); border-bottom:1px solid var(--border); padding:0 24px; display:flex; gap:0; position:sticky; top:68px; z-index:40; box-shadow:0 1px 6px rgba(0,0,0,0.05); }
   .main-tab { padding:14px 22px; font-size:14px; font-weight:700; color:var(--text-mut); cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-1px; transition:all 0.2s; display:flex; align-items:center; gap:9px; user-select:none; }
   .main-tab:hover { color:var(--text); }
@@ -60,24 +56,19 @@
   .main-tab.active-rka        .tab-icon { stroke:var(--rka); }
   .main-tab.active-acc        .tab-icon { stroke:var(--acc); }
   .tab-desc { font-size:10px; font-weight:500; display:block; color:var(--text-mut); margin-top:1px; }
-
   .container { max-width:1500px; margin:0 auto; padding:20px 24px 40px; }
   .loading-screen { display:flex; align-items:center; justify-content:center; min-height:55vh; flex-direction:column; gap:14px; }
   .spin { width:38px; height:38px; border:3px solid #e3e8ed; border-top-color:var(--green); border-radius:50%; animation:spin 0.8s linear infinite; }
   @keyframes spin { to { transform:rotate(360deg); } }
   .loading-text { color:var(--text-mut); font-size:13px; }
-
   .section-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:18px; flex-wrap:wrap; gap:10px; }
   .section-title { font-size:18px; font-weight:800; color:var(--text); display:flex; align-items:center; gap:10px; }
   .section-title .dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
   .section-subtitle { font-size:12px; color:var(--text-mut); margin-top:3px; font-weight:500; }
-
   .kpi-group-title { font-size:11px; font-weight:800; color:var(--text-mut); text-transform:uppercase; letter-spacing:0.08em; margin:6px 0 10px 4px; display:flex; align-items:center; gap:8px; }
   .kpi-group-title::after { content:''; flex:1; height:1px; background:var(--border); }
   .kpi-group-title .group-badge { background:#fef3c7; color:#92400e; padding:2px 9px; border-radius:99px; font-size:10px; font-weight:700; text-transform:none; letter-spacing:0; }
   .kpi-group-title .group-badge.green  { background:#d1fae5; color:#065f46; }
-  .kpi-group-title .group-badge.purple { background:#f3e8ff; color:#5b21b6; }
-
   .kpi-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-bottom:14px; }
   .kpi-grid.three { grid-template-columns:repeat(3,1fr); }
   .kpi { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:15px 16px; transition:transform 0.15s,box-shadow 0.15s; }
@@ -105,7 +96,6 @@
   .kpi.purple .kpi-value  { color:#7c3aed; }
   .kpi.success .kpi-value { color:#065f46; }
   .kpi-sub { font-size:11px; color:var(--text-mut); margin-top:5px; font-weight:500; }
-
   .panel { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }
   .panel-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
   .panel-title { font-size:13px; font-weight:700; color:var(--text); display:flex; align-items:center; gap:7px; }
@@ -116,7 +106,6 @@
   .chart-wrap { position:relative; height:240px; }
   .chart-wrap.tall { height:340px; }
   .chart-row-2 { display:grid; grid-template-columns:1.4fr 1fr; gap:14px; margin-bottom:16px; }
-
   .rka-filter-bar { display:flex; gap:8px; align-items:center; margin-bottom:18px; flex-wrap:wrap; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
   .rka-filter-label { font-size:12px; font-weight:700; color:var(--text-mut); margin-right:4px; }
   .bulan-chip { padding:6px 14px; border-radius:99px; font-size:12px; font-weight:700; cursor:pointer; border:1.5px solid var(--border); background:#f8fafc; color:var(--text-mut); transition:all 0.15s; user-select:none; white-space:nowrap; }
@@ -129,11 +118,9 @@
   .rka-loading-mini { display:none; margin-left:auto; align-items:center; gap:8px; font-size:12px; color:var(--rka); font-weight:600; }
   .rka-loading-mini.show { display:flex; }
   .rka-loading-mini .mini-spin { width:14px; height:14px; border:2px solid #fde68a; border-top-color:var(--rka); border-radius:50%; animation:spin 0.8s linear infinite; }
-
   .mode-banner { background:linear-gradient(135deg,#fef3c7,#fde68a); border:1px solid #fbbf24; border-radius:10px; padding:10px 16px; margin-bottom:16px; display:flex; align-items:center; gap:10px; font-size:12px; color:#78350f; font-weight:600; }
   .mode-banner.bulan { background:linear-gradient(135deg,#dbeafe,#bfdbfe); border-color:#60a5fa; color:#1e3a8a; }
   .mode-banner svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; flex-shrink:0; }
-
   .table-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:8px; }
   table { width:100%; border-collapse:collapse; font-size:13px; }
   th { text-align:left; padding:10px 10px; font-weight:700; font-size:11px; color:var(--text-mut); text-transform:uppercase; letter-spacing:0.04em; border-bottom:2px solid var(--border); background:#fafbfc; white-space:nowrap; position:sticky; top:0; z-index:5; }
@@ -141,7 +128,6 @@
   th.center, td.center { text-align:center; }
   td { padding:11px 10px; border-bottom:1px solid var(--border); vertical-align:middle; }
   tbody tr:hover { background:#fffbeb; }
-
   .table-grouped { font-size:12px; }
   .table-grouped th { padding:8px 8px; font-size:10px; }
   .table-grouped td { padding:9px 8px; }
@@ -156,7 +142,6 @@
   .table-grouped .num.zero { color:#d1d5db; }
   .table-grouped .total-row { background:#fffbeb; font-weight:800; }
   .table-grouped .total-row td { border-top:2px solid #fde68a; }
-
   .table-rekap th { font-size:11px; padding:12px 14px; }
   .table-rekap td { padding:11px 14px; }
   .table-rekap th.col-jenis  { min-width:220px; background:#fafbfc; }
@@ -171,12 +156,10 @@
   .table-rekap .total-row    { background:#fffbeb; font-weight:800; border-top:2px solid #fde68a; }
   .table-rekap .total-row td { border-top:2px solid #fde68a; }
   .table-rekap tbody tr:hover { background:#fef9ec; }
-
   .badge { display:inline-flex; padding:3px 9px; border-radius:99px; font-size:11px; font-weight:700; align-items:center; gap:4px; white-space:nowrap; }
   .b-kritis { background:#fee2e2; color:#991b1b; }
   .b-tinggi { background:#fef3c7; color:#92400e; }
   .b-normal { background:#d1fae5; color:#065f46; }
-
   .prog-row { display:grid; grid-template-columns:180px 1fr 90px 90px 80px; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #f1f5f9; font-size:13px; }
   .prog-row:last-child { border-bottom:none; }
   .prog-kapal { font-weight:700; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -187,7 +170,6 @@
   .prog-sisa { font-size:11px; font-weight:700; text-align:right; font-family:'SF Mono',Consolas,monospace; }
   .prog-header { display:grid; grid-template-columns:180px 1fr 90px 90px 80px; align-items:center; gap:10px; padding:0 0 8px; border-bottom:2px solid var(--border); font-size:11px; font-weight:700; color:var(--text-mut); text-transform:uppercase; letter-spacing:0.04em; }
   .prog-header span:nth-child(3),.prog-header span:nth-child(4),.prog-header span:nth-child(5) { text-align:right; }
-
   .rka-acc { border:1px solid var(--border); border-radius:12px; margin-bottom:10px; overflow:hidden; }
   .rka-acc-head { display:flex; align-items:center; justify-content:space-between; padding:14px 18px; background:linear-gradient(135deg,#fffbeb,#fef3c7); cursor:pointer; user-select:none; transition:background 0.15s; }
   .rka-acc-head:hover { background:linear-gradient(135deg,#fef3c7,#fde68a); }
@@ -207,20 +189,16 @@
   .rka-acc-head.open .rka-chev { transform:rotate(180deg); }
   .rka-acc-body { display:none; padding:14px 18px; background:#fafafa; }
   .rka-acc-body.open { display:block; }
-
   .search-row { display:flex; gap:10px; align-items:center; margin-bottom:12px; flex-wrap:wrap; }
   .search-input { flex:1; min-width:200px; padding:8px 12px; border:1px solid var(--border); border-radius:8px; font-family:inherit; font-size:13px; outline:none; }
   .search-input:focus { border-color:var(--rka); box-shadow:0 0 0 3px rgba(180,83,9,0.1); }
   .filter-select { padding:8px 12px; border:1px solid var(--border); border-radius:8px; font-family:inherit; font-size:13px; background:#fff; cursor:pointer; outline:none; }
-
   .btn-acc-ctrl { background:#f1f5f9; color:var(--text-mut); border:1px solid var(--border); padding:6px 12px; border-radius:7px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; transition:all 0.15s; display:flex; align-items:center; gap:5px; }
   .btn-acc-ctrl svg { width:13px; height:13px; fill:none; stroke:currentColor; stroke-width:2; }
   .btn-acc-ctrl:hover { background:#e2e8f0; color:var(--text); }
-
-  .toast-fly { position:fixed; top:80px; right:24px; background:var(--green); color:#fff; padding:12px 18px; border-radius:10px; font-size:13px; font-weight:700; box-shadow:0 8px 30px rgba(0,0,0,0.18); z-index:300; animation:slideIn 0.3s ease; }
+  .toast-fly { position:fixed; top:80px; right:24px; background:var(--green); color:#fff; padding:12px 18px; border-radius:10px; font-size:13px; font-weight:700; box-shadow:0 8px 30px rgba(0,0,0,0.18); z-index:300; animation:slideIn 0.3s ease; max-width:400px; }
   .toast-fly.error { background:var(--red); }
   @keyframes slideIn { from { transform:translateX(20px); opacity:0; } to { transform:translateX(0); opacity:1; } }
-
   .modal-bg { display:none; position:fixed; inset:0; background:rgba(10,34,64,0.55); backdrop-filter:blur(4px); z-index:100; align-items:center; justify-content:center; padding:20px; }
   .modal-bg.show { display:flex; }
   .modal { background:#fff; border-radius:16px; width:100%; max-width:560px; max-height:92vh; overflow-y:auto; animation:pop 0.22s ease; }
@@ -241,12 +219,10 @@
   .modal-head .modal-badge { font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px; margin-left:8px; }
   .modal-head .mb-permintaan { background:var(--green-lt); color:var(--green); }
   .modal-head .mb-laporan    { background:var(--blue-lt); color:var(--blue); }
-
   .empty-state { background:var(--card); border:1px dashed var(--border); border-radius:14px; padding:60px 20px; text-align:center; }
   .empty-state svg { width:48px; height:48px; stroke:#b0c4cd; fill:none; stroke-width:1.5; margin-bottom:12px; }
   .empty-state h3 { font-size:16px; color:var(--text); margin-bottom:6px; }
   .empty-state p { font-size:13px; color:var(--text-mut); }
-
   .insights { background:linear-gradient(135deg,#fefce8,#fef9c3); border:1px solid #fde68a; border-radius:12px; padding:14px 18px; margin-bottom:16px; }
   .insight-item { display:flex; gap:10px; align-items:flex-start; padding:8px 0; border-bottom:1px dashed rgba(0,0,0,0.07); font-size:13px; color:#5a4a0e; line-height:1.5; }
   .insight-item:last-child { border-bottom:none; }
@@ -255,7 +231,6 @@
   .insight-icon.danger  { background:#fecaca; color:#991b1b; }
   .insight-icon.info    { background:#bfdbfe; color:#1e40af; }
   .insight-icon svg { width:12px; height:12px; fill:none; stroke-width:2.5; stroke-linecap:round; stroke:currentColor; }
-
   .filter-tabs { display:flex; gap:4px; margin-bottom:12px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
   .ftab { padding:9px 14px; font-size:13px; font-weight:600; color:var(--text-mut); cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-1px; transition:all 0.15s; display:flex; align-items:center; gap:6px; white-space:nowrap; }
   .ftab:hover { color:var(--text); }
@@ -264,7 +239,6 @@
   .ftab.active .badge-cnt { background:var(--permintaan); color:#fff; }
   .ftab.f-danger .badge-cnt  { background:var(--red); color:#fff; }
   .ftab.f-warning .badge-cnt { background:var(--orange); color:#fff; }
-
   .laporan-stats { display:flex; gap:12px; margin-bottom:18px; flex-wrap:wrap; }
   .stat-pill { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px 18px; display:flex; align-items:center; gap:12px; min-width:160px; flex:1; }
   .stat-pill .sp-icon { width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
@@ -275,26 +249,21 @@
   .stat-pill .sp-icon.purple { background:#f3e8ff; } .stat-pill .sp-icon.purple svg { stroke:#7c3aed; }
   .stat-pill .sp-val { font-size:22px; font-weight:800; line-height:1; letter-spacing:-0.5px; }
   .stat-pill .sp-lbl { font-size:11px; color:var(--text-mut); font-weight:600; text-transform:uppercase; letter-spacing:0.04em; margin-top:2px; }
-
   .report-no { font-family:'SF Mono',Consolas,monospace; font-size:11px; color:var(--text-mut); font-weight:700; }
   .vessel-name { font-weight:700; color:var(--text); }
   .notes-cell { color:var(--text-mut); font-size:12px; max-width:200px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-
   .b-Kritis { background:#fee2e2; color:#991b1b; } .b-Tinggi { background:#fed7aa; color:#9a3412; }
   .b-Sedang { background:#fef3c7; color:#92400e; } .b-Rendah { background:#d1fae5; color:#065f46; }
   .s-Baru { background:#e0e7ff; color:#3730a3; } .s-Diproses { background:#fed7aa; color:#9a3412; }
   .s-Disetujui { background:#ddd6fe; color:#5b21b6; } .s-Selesai { background:#d1fae5; color:#065f46; }
   .s-Ditolak { background:#fee2e2; color:#991b1b; }
-
   .age-overdue { background:#fee2e2; color:#991b1b; padding:2px 7px; border-radius:6px; font-size:11px; font-weight:700; }
   .age-warn    { background:#fef3c7; color:#92400e; padding:2px 7px; border-radius:6px; font-size:11px; font-weight:700; }
   .age-ok      { color:var(--text-mut); font-size:12px; }
-
   .btn-green { background:var(--green); color:#fff; border:none; padding:6px 12px; border-radius:6px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; }
   .btn-green:hover { background:#085041; }
   .btn-blue { background:var(--blue); color:#fff; border:none; padding:6px 12px; border-radius:6px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; }
   .btn-blue:hover { background:#1565c0; }
-
   .acc-month { border:1px solid var(--border); border-radius:12px; margin-bottom:10px; overflow:hidden; }
   .acc-month-head { display:flex; align-items:center; justify-content:space-between; padding:14px 18px; background:linear-gradient(135deg,#f8faff,#eef3fb); cursor:pointer; user-select:none; }
   .acc-month-head:hover { background:linear-gradient(135deg,#eef3fb,#e3ecf8); }
@@ -327,7 +296,6 @@
   .acc-vessel-head.open .acc-vessel-chev { transform:rotate(180deg); }
   .acc-vessel-body { display:none; }
   .acc-vessel-body.open { display:block; }
-
   .hl { background:#fef08a; border-radius:2px; padding:0 1px; }
   .acc-search-row { display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; align-items:center; }
   .file-link { display:inline-flex; align-items:center; gap:4px; padding:4px 9px; background:var(--green-lt); color:var(--green); border-radius:6px; font-size:11px; font-weight:700; text-decoration:none; margin-right:5px; margin-bottom:4px; }
@@ -341,7 +309,6 @@
   .form-group textarea { resize:vertical; min-height:72px; }
   .update-section-title { font-size:13px; font-weight:800; color:var(--green); margin-bottom:12px; display:flex; align-items:center; gap:7px; }
   .update-section-title svg { width:15px; height:15px; stroke:var(--green); fill:none; stroke-width:2; }
-
   .acc-severity { display:inline-flex; padding:3px 10px; border-radius:99px; font-size:11px; font-weight:700; gap:4px; align-items:center; }
   .acc-severity.belum   { background:#fee2e2; color:#991b1b; }
   .acc-severity.proses  { background:#fef3c7; color:#92400e; }
@@ -351,7 +318,6 @@
   .lost-opp-bar { display:flex; align-items:center; gap:8px; }
   .lost-opp-fill { height:8px; border-radius:99px; background:#991b1b; min-width:4px; }
   .lost-opp-val { font-size:12px; font-weight:700; color:#991b1b; white-space:nowrap; }
-
   .acc-evidence-link { display:inline-flex; align-items:center; gap:5px; padding:4px 10px; background:#fee2e2; color:#991b1b; border-radius:6px; font-size:11px; font-weight:700; text-decoration:none; margin:2px 3px 2px 0; border:1px solid #fca5a5; }
   .acc-evidence-link:hover { background:#991b1b; color:#fff; }
   .acc-evidence-link svg { width:11px; height:11px; fill:none; stroke:currentColor; stroke-width:2.5; flex-shrink:0; }
@@ -363,9 +329,7 @@
   .acc-evidence-modal-link svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; flex-shrink:0; }
   .acc-evidence-modal-link .ev-label { flex:1; }
   .acc-evidence-modal-link .ev-url { font-size:10px; font-weight:400; opacity:0.7; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:200px; }
-
   .footer-meta { text-align:center; color:var(--text-mut); font-size:11px; margin-top:28px; padding-top:14px; border-top:1px solid var(--border); }
-
   .p-bulan-bar { display:flex; gap:6px; align-items:center; margin-bottom:14px; flex-wrap:wrap; background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #86efac; border-radius:12px; padding:12px 16px; }
   .p-bulan-label { font-size:11px; font-weight:800; color:#065f46; text-transform:uppercase; letter-spacing:0.06em; margin-right:4px; display:flex; align-items:center; gap:5px; white-space:nowrap; }
   .p-bulan-label svg { width:13px; height:13px; stroke:#065f46; fill:none; stroke-width:2; }
@@ -377,17 +341,14 @@
   .p-chip.semua.active { background:var(--permintaan); color:#fff; border-color:var(--permintaan); }
   .p-chip-divider { width:1px; height:20px; background:#86efac; margin:0 4px; }
   .p-bulan-info { margin-left:auto; font-size:11px; color:#065f46; font-weight:600; background:#bbf7d0; padding:3px 10px; border-radius:99px; white-space:nowrap; }
-
   .month-badge { display:inline-block; margin-top:3px; padding:1px 7px; border-radius:99px; font-size:10px; font-weight:700; background:#d1fae5; color:#065f46; }
   .month-badge.bulan-lalu { background:#dbeafe; color:#1e40af; }
   .month-badge.bulan-lama { background:#f3f4f6; color:#6b7280; }
-
   .view-toggle { display:flex; gap:4px; background:#f1f5f9; border-radius:8px; padding:3px; }
   .vtog { padding:5px 13px; border-radius:6px; font-size:12px; font-weight:700; cursor:pointer; color:var(--text-mut); transition:all 0.15s; display:flex; align-items:center; gap:5px; user-select:none; white-space:nowrap; }
   .vtog svg { width:13px; height:13px; fill:none; stroke:currentColor; stroke-width:2; }
   .vtog.active { background:#fff; color:var(--permintaan); box-shadow:0 1px 4px rgba(0,0,0,0.1); }
   .vtog:not(.active):hover { color:var(--text); }
-
   .pkapal-acc { border:1px solid var(--border); border-radius:12px; margin-bottom:10px; overflow:hidden; }
   .pkapal-head { display:flex; align-items:center; justify-content:space-between; padding:13px 18px; background:linear-gradient(135deg,#f0fdf4,#dcfce7); cursor:pointer; user-select:none; transition:background 0.15s; }
   .pkapal-head:hover { background:linear-gradient(135deg,#dcfce7,#bbf7d0); }
@@ -411,7 +372,10 @@
   .pkapal-body table { font-size:12px; }
   .pkapal-body td { padding:10px 12px; }
   .pkapal-body th { padding:9px 12px; font-size:10px; }
-
+  .config-error { background:linear-gradient(135deg,#fff5f5,#ffeae8); border:2px solid #fca5a5; border-radius:14px; padding:20px 24px; margin:20px auto; max-width:800px; }
+  .config-error h3 { color:#991b1b; font-size:16px; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+  .config-error p { color:#7f1d1d; font-size:13px; line-height:1.7; margin-bottom:6px; }
+  .config-error code { background:#fff; padding:2px 8px; border-radius:4px; font-family:'SF Mono',Consolas,monospace; font-size:12px; color:#991b1b; border:1px solid #fca5a5; }
   @media (max-width:1200px) {
     .kpi-grid { grid-template-columns:repeat(3,1fr); }
     .kpi-grid.three { grid-template-columns:repeat(3,1fr); }
@@ -433,7 +397,6 @@
 </head>
 <body>
 
-<!-- ═══════ TOP BAR ═══════ -->
 <div class="top-bar">
   <div class="brand">
     <div class="brand-mark">ASDP</div>
@@ -443,7 +406,6 @@
     </div>
   </div>
   <div class="right">
-    <!-- API Status badge -->
     <div class="api-status load" id="apiStatusBadge">
       <div class="dot"></div>
       <span id="apiStatusText">Connecting...</span>
@@ -461,7 +423,6 @@
   </div>
 </div>
 
-<!-- ═══════ MAIN TABS ═══════ -->
 <div class="main-tab-bar">
   <div class="main-tab active-permintaan" id="mainTabPermintaan" onclick="switchMainTab('permintaan')">
     <svg class="tab-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
@@ -492,7 +453,15 @@
     <div class="loading-text" id="loadingText">Menghubungkan ke server...</div>
   </div>
 
-  <!-- ═══════ PANEL PERMINTAAN ═══════ -->
+  <div class="config-error" id="configError" style="display:none">
+    <h3>⚠ Konfigurasi API Belum Diisi</h3>
+    <p>Variabel <code>API_BASE</code> di dalam file <code>index.html</code> masih kosong atau belum benar.</p>
+    <p><strong>Cara memperbaiki:</strong></p>
+    <p>1. Buka Apps Script Editor → Deploy → Manage Deployments → copy URL Web App (berakhiran <code>/exec</code>).</p>
+    <p>2. Edit file <code>index.html</code>, cari baris <code>var API_BASE = '…'</code>, ganti dengan URL yang sudah di-copy.</p>
+    <p>3. Commit dan push ke GitHub. Tunggu ±1 menit, lalu refresh halaman.</p>
+  </div>
+
   <div id="panelPermintaan" style="display:none">
     <div class="section-header"><div><div class="section-title"><span class="dot" style="background:var(--permintaan)"></span>Permintaan &amp; Laporan Kerusakan</div><div class="section-subtitle">Dokumen yang memerlukan tindakan</div></div></div>
     <div class="p-bulan-bar" id="pBulanBar">
@@ -549,7 +518,6 @@
     </div>
   </div>
 
-  <!-- ═══════ PANEL LAPORAN RUTIN ═══════ -->
   <div id="panelLaporan" style="display:none">
     <div class="section-header"><div><div class="section-title"><span class="dot" style="background:var(--laporan)"></span>Laporan Rutin Kapal</div><div class="section-subtitle">Arsip dokumen rutin crew</div></div></div>
     <div class="laporan-stats">
@@ -570,7 +538,6 @@
     </div>
   </div>
 
-  <!-- ═══════ PANEL RKA ═══════ -->
   <div id="panelRka" style="display:none">
     <div class="section-header"><div><div class="section-title"><span class="dot" style="background:var(--rka)"></span>RKA &amp; Realisasi Anggaran 2026</div><div class="section-subtitle">Kinerja Teknik · Penggunaan anggaran pemeliharaan per kapal &amp; per bulan</div></div><span id="rkaLastUpdate" style="font-size:11px;color:var(--text-mut)"></span></div>
     <div id="rkaLoadingScreen" style="display:flex;align-items:center;justify-content:center;min-height:200px;flex-direction:column;gap:14px"><div class="spin" style="border-top-color:var(--rka)"></div><div class="loading-text">Memuat data anggaran...</div></div>
@@ -631,7 +598,6 @@
     </div>
   </div>
 
-  <!-- ═══════ PANEL ACCIDENT ═══════ -->
   <div id="panelAcc" style="display:none">
     <div class="section-header"><div><div class="section-title"><span class="dot" style="background:var(--acc)"></span>Report Accident 2026</div><div class="section-subtitle">Kecelakaan &amp; insiden kapal · Lost Opportunity · Status Penanganan</div></div><span id="accLastUpdate" style="font-size:11px;color:var(--text-mut)"></span></div>
     <div id="accLoadingScreen" style="display:flex;align-items:center;justify-content:center;min-height:200px;flex-direction:column;gap:14px"><div class="spin" style="border-top-color:var(--acc)"></div><div class="loading-text">Memuat data accident...</div></div>
@@ -666,7 +632,6 @@
   <div class="footer-meta">Data terakhir diperbarui: <span id="lastUpdate">—</span> · Sumber: Google Sheets ASDP Ternate · <span id="cacheInfo"></span></div>
 </div>
 
-<!-- MODAL -->
 <div class="modal-bg" id="modalBg" onclick="closeModalIfBg(event)">
   <div class="modal" onclick="event.stopPropagation()">
     <div class="modal-head"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><h3 id="modalTitle">Detail</h3><span class="modal-badge" id="modalBadge"></span></div><button class="modal-close" onclick="closeModal()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
@@ -675,17 +640,14 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════════
-     JAVA — semua google..run diganti fetch()
-══════════════════════════════════════════════════════════ -->
-<>
+<script>
 // ═══════════════════════════════════════════════════════════
-//  ⚙️  KONFIGURASI — GANTI URL INI DENGAN DEPLOYMENT URL KAMU
-//  Cara dapat URL: Apps Script → Deploy → Manage Deployments → copy URL
+//  ⚙️ KONFIGURASI API — GANTI URL INI DENGAN DEPLOYMENT URL ANDA
+//  Cara dapat URL:
+//    Apps Script Editor → Deploy → Manage Deployments
+//    → copy URL berakhiran /exec
 // ═══════════════════════════════════════════════════════════
-var API_BASE = 'https://script.google.com/macros/s/AKfycbz_xBJB5qoxTwSd870-2NzHzic91pneqgB4hmfYDzUREROaKranXxErirxO1NGbr7_Lyg/exec';
-// Contoh:
-// var API_BASE = 'https://script.google.com/macros/s/AKfycbxABCD1234.../exec';
+var API_BASE = 'https://script.google.com/macros/s/AKfycbyhPuYBDVzxjtOs5oBUx3AdZPyDyNFWB5aZ_sJG9otI-crBLb7pZCZEpPPxfPiWpAbThA/exec';
 
 // ── Konstanta ──────────────────────────────────────────────
 var JENIS_PERMINTAAN = ["Permintaan Suku Cadang","Permintaan Perbaikan","Permintaan Permesinan","Permintaan Akomodasi","Laporan Kerusakan"];
@@ -701,20 +663,70 @@ function isPermintaan(t) { return JENIS_PERMINTAAN.indexOf(t) >= 0; }
 var STATE = {
   data:null, permintaan:[], laporan:[],
   rkaData:null, rkaBulanAktif:'all', rkaBulanTersedia:[],
-  rkaAccOpen:{},
-  accData:null,
-  mainTab:'permintaan',
-  pActiveTab:'all',
-  pBulanAktif:'all',
-  pViewMode:'table',
-  pKapalAccOpen:{},
+  rkaAccOpen:{}, accData:null,
+  mainTab:'permintaan', pActiveTab:'all', pBulanAktif:'all',
+  pViewMode:'table', pKapalAccOpen:{},
   selectedReport:null, selectedMode:null,
   charts:{}, accOpenState:{}
 };
 
 // ═══════════════════════════════════════════════════════════
-//  API FETCH HELPERS — menggantikan google.script.run
+//  JSONP LOADER — bypass CORS dari GitHub Pages
+//  Cara kerja: inject <script src="…?callback=cbName"></script>
+//  Apps Script return: cbName({...data...});
+//  Tag <script> tidak terkena CORS, jadi bisa cross-origin.
 // ═══════════════════════════════════════════════════════════
+var __jsonpCounter = 0;
+function jsonpFetch(params, timeoutMs) {
+  return new Promise(function(resolve, reject) {
+    if (!API_BASE || API_BASE.indexOf('AKfycb') < 0) {
+      document.getElementById('configError').style.display = 'block';
+      document.getElementById('loadingScreen').style.display = 'none';
+      reject(new Error('API_BASE belum diisi. Edit index.html.'));
+      return;
+    }
+    var cbName = '__asdpCb' + (++__jsonpCounter) + '_' + Date.now();
+    var url = API_BASE + (API_BASE.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + cbName;
+    Object.keys(params || {}).forEach(function(k){
+      if (params[k] !== undefined && params[k] !== null && params[k] !== '') {
+        url += '&' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+      }
+    });
+    var s = document.createElement('script');
+    var done = false;
+    var timer = setTimeout(function(){
+      if (done) return;
+      done = true;
+      cleanup();
+      reject(new Error('Request timeout (>' + (timeoutMs/1000) + 's). Periksa URL API atau koneksi.'));
+    }, timeoutMs || 30000);
+    function cleanup() {
+      try { delete window[cbName]; } catch(e) { window[cbName] = undefined; }
+      if (s.parentNode) s.parentNode.removeChild(s);
+    }
+    window[cbName] = function(data) {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      cleanup();
+      resolve(data);
+    };
+    s.onerror = function() {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      cleanup();
+      reject(new Error('Gagal load script. URL API mungkin salah, web app tidak di-share "Anyone", atau script belum di-authorize. Buka URL langsung di tab baru untuk cek.'));
+    };
+    s.src = url;
+    document.head.appendChild(s);
+  });
+}
+
+function apiFetch(params)  { return jsonpFetch(params, 45000); }
+function apiUpdate(params) { return jsonpFetch(params, 20000); }
+
+// ── API status badge ───────────────────────────────────────
 function setApiStatus(state, text) {
   var el = document.getElementById('apiStatusBadge');
   var tx = document.getElementById('apiStatusText');
@@ -722,69 +734,50 @@ function setApiStatus(state, text) {
   tx.textContent = text;
 }
 
-async function apiFetch(params) {
-  var url = new URL(API_BASE);
-  Object.keys(params).forEach(function(k){ url.searchParams.set(k, params[k]); });
-  var res = await fetch(url.toString(), {
-    redirect: 'follow',
-    mode: 'cors',
-    credentials: 'omit'
-  });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-  return await res.json();
-}
-
-// ── Update status via GET (Apps Script limitation: no POST on CORS) ──
-async function apiUpdate(params) {
-  return apiFetch(params);
-}
-
 // ═══════════════════════════════════════════════════════════
-//  LOAD DATA DASHBOARD
+//  LOAD DASHBOARD
 // ═══════════════════════════════════════════════════════════
-async function loadData() {
+function loadData() {
   document.getElementById('loadingScreen').style.display = 'flex';
   document.getElementById('loadingText').textContent = 'Menghubungkan ke server...';
   ['panelPermintaan','panelLaporan','panelRka','panelAcc','emptyState'].forEach(function(id){
     document.getElementById(id).style.display = 'none';
   });
   setApiStatus('load', 'Loading...');
-
   var period = parseInt(document.getElementById('periodFilter').value, 10);
-  try {
-    var res = await apiFetch({ action:'dashboard', period:period });
-    document.getElementById('loadingScreen').style.display = 'none';
-    onDataLoaded(res);
-    setApiStatus('ok', res._cached ? 'Cache ✓' : 'Live ✓');
-    if (res._cached) document.getElementById('cacheInfo').textContent = '⚡ Data dari cache (5 menit)';
-    else document.getElementById('cacheInfo').textContent = '🔄 Data live dari Sheets';
-  } catch(err) {
-    document.getElementById('loadingScreen').style.display = 'none';
-    setApiStatus('err', 'Error');
-    onError(err);
-  }
+  apiFetch({ action:'dashboard', period:period })
+    .then(function(res){
+      document.getElementById('loadingScreen').style.display = 'none';
+      onDataLoaded(res);
+      setApiStatus('ok', res._cached ? 'Cache ✓' : 'Live ✓');
+      document.getElementById('cacheInfo').textContent = res._cached ? '⚡ Data dari cache (5 menit)' : '🔄 Data live dari Sheets';
+    })
+    .catch(function(err){
+      document.getElementById('loadingScreen').style.display = 'none';
+      setApiStatus('err', 'Error');
+      onError(err);
+    });
 }
 
 function onDataLoaded(res) {
-  if (!res.success) { showToast('Gagal: ' + res.message, true); return; }
-  if (res.empty)    { document.getElementById('emptyState').style.display = 'block'; return; }
+  if (!res || !res.success) { showToast('Gagal: ' + (res ? res.message : 'unknown'), true); return; }
+  if (res.empty) { document.getElementById('emptyState').style.display = 'block'; return; }
   STATE.data        = res;
-  STATE.permintaan  = res.laporan.filter(function(r){ return isPermintaan(r.type); });
-  STATE.laporan     = res.laporan.filter(function(r){ return !isPermintaan(r.type); });
+  STATE.permintaan  = (res.laporan || []).filter(function(r){ return isPermintaan(r.type); });
+  STATE.laporan     = (res.laporan || []).filter(function(r){ return !isPermintaan(r.type); });
   STATE.pBulanAktif = 'all';
   document.getElementById('mainCntPermintaan').textContent = STATE.permintaan.length;
   document.getElementById('mainCntLaporan').textContent    = STATE.laporan.length;
-  document.getElementById('lastUpdate').textContent        = res.generatedAt;
+  document.getElementById('lastUpdate').textContent        = res.generatedAt || '—';
   renderActivePanel();
 }
 
 function onError(err) {
-  showToast('Error koneksi ke API. Pastikan URL sudah benar. Detail: ' + (err.message||err), true);
+  showToast('Error koneksi: ' + (err.message || err), true);
 }
 
-async function refreshAll() {
-  STATE.rkaData  = null;
-  STATE.accData  = null;
+function refreshAll() {
+  STATE.rkaData = null; STATE.accData = null;
   if (STATE.mainTab === 'rka') loadRkaData(STATE.rkaBulanAktif);
   else if (STATE.mainTab === 'accident') loadAccidentData();
   else loadData();
@@ -793,7 +786,7 @@ async function refreshAll() {
 // ═══════════════════════════════════════════════════════════
 //  LOAD RKA
 // ═══════════════════════════════════════════════════════════
-async function loadRkaData(bulan) {
+function loadRkaData(bulan) {
   if (!STATE.rkaData) {
     document.getElementById('rkaLoadingScreen').style.display = 'flex';
     document.getElementById('rkaContent').style.display = 'none';
@@ -802,17 +795,17 @@ async function loadRkaData(bulan) {
   }
   var params = { action:'rka' };
   if (bulan && bulan !== 'all') params.bulan = bulan;
-
-  try {
-    var res = await apiFetch(params);
-    document.getElementById('rkaLoadingScreen').style.display = 'none';
-    document.getElementById('rkaMiniLoading').classList.remove('show');
-    onRkaLoaded(res);
-  } catch(err) {
-    document.getElementById('rkaLoadingScreen').style.display = 'none';
-    document.getElementById('rkaMiniLoading').classList.remove('show');
-    showToast('Error RKA: ' + err.message, true);
-  }
+  apiFetch(params)
+    .then(function(res){
+      document.getElementById('rkaLoadingScreen').style.display = 'none';
+      document.getElementById('rkaMiniLoading').classList.remove('show');
+      onRkaLoaded(res);
+    })
+    .catch(function(err){
+      document.getElementById('rkaLoadingScreen').style.display = 'none';
+      document.getElementById('rkaMiniLoading').classList.remove('show');
+      showToast('Error RKA: ' + err.message, true);
+    });
 }
 
 function onRkaLoaded(res) {
@@ -821,12 +814,11 @@ function onRkaLoaded(res) {
   STATE.rkaBulanAktif    = (res.mode === 'rekap') ? 'all' : res.bulanTarget;
   STATE.rkaBulanTersedia = res.bulanTersedia || [];
   document.getElementById('rkaContent').style.display = 'block';
-  document.getElementById('rkaLastUpdate').textContent = '🔄 ' + res.generatedAt;
+  document.getElementById('rkaLastUpdate').textContent = '🔄 ' + (res.generatedAt || '');
   document.getElementById('mainCntRka').textContent = res.kapalArr ? res.kapalArr.length : '—';
   document.getElementById('rkachip-all').classList.toggle('active', STATE.rkaBulanAktif === 'all');
-  BULAN_SHORT.forEach(function(b) {
-    var el = document.getElementById('rkachip-' + b);
-    if (!el) return;
+  BULAN_SHORT.forEach(function(b){
+    var el = document.getElementById('rkachip-' + b); if (!el) return;
     el.classList.remove('active','no-data');
     if (STATE.rkaBulanTersedia.indexOf(b) < 0) el.classList.add('no-data');
     if (b === STATE.rkaBulanAktif) el.classList.add('active');
@@ -837,78 +829,74 @@ function onRkaLoaded(res) {
 // ═══════════════════════════════════════════════════════════
 //  LOAD ACCIDENT
 // ═══════════════════════════════════════════════════════════
-async function loadAccidentData() {
+function loadAccidentData() {
   document.getElementById('accLoadingScreen').style.display = 'flex';
   document.getElementById('accContent').style.display = 'none';
-  try {
-    var res = await apiFetch({ action:'accident' });
-    document.getElementById('accLoadingScreen').style.display = 'none';
-    onAccidentLoaded(res);
-  } catch(err) {
-    document.getElementById('accLoadingScreen').style.display = 'none';
-    showToast('Error Accident: ' + err.message, true);
-  }
+  apiFetch({ action:'accident' })
+    .then(function(res){
+      document.getElementById('accLoadingScreen').style.display = 'none';
+      onAccidentLoaded(res);
+    })
+    .catch(function(err){
+      document.getElementById('accLoadingScreen').style.display = 'none';
+      showToast('Error Accident: ' + err.message, true);
+    });
 }
 
 function onAccidentLoaded(res) {
   if (!res || !res.success) { showToast('Gagal: ' + (res ? res.message : 'Unknown'), true); return; }
   if (res.empty) {
     document.getElementById('accContent').style.display = 'block';
-    document.getElementById('accTableBody').innerHTML = '<tr><td colspan="9" style="text-align:center;padding:30px;color:#9ca3af">Belum ada data accident.</td></tr>';
+    document.getElementById('accTableBody').innerHTML = '<tr><td colspan="10" style="text-align:center;padding:30px;color:#9ca3af">Belum ada data accident.</td></tr>';
     return;
   }
   STATE.accData = res;
-  document.getElementById('accLastUpdate').textContent = '🔄 ' + res.generatedAt;
+  document.getElementById('accLastUpdate').textContent = '🔄 ' + (res.generatedAt || '');
   document.getElementById('mainCntAcc').textContent = res.kpi.total;
   document.getElementById('accContent').style.display = 'block';
   renderAccPanel();
 }
 
 // ═══════════════════════════════════════════════════════════
-//  SAVE STATUS LAPORAN — via fetch GET
+//  SAVE STATUS
 // ═══════════════════════════════════════════════════════════
-async function saveStatus() {
+function saveStatus() {
   if (!STATE.selectedReport) return;
   var btn = document.getElementById('btnSaveStatus');
   btn.disabled = true; btn.textContent = 'Menyimpan...';
-  try {
-    var res = await apiUpdate({
-      action   : 'update_laporan',
-      reportNo : STATE.selectedReport.reportNo,
-      status   : document.getElementById('upStatus').value,
-      pic      : document.getElementById('upPic').value.trim(),
-      catatan  : document.getElementById('upCatatan').value.trim()
-    });
+  apiUpdate({
+    action   : 'update_laporan',
+    reportNo : STATE.selectedReport.reportNo,
+    status   : document.getElementById('upStatus').value,
+    pic      : document.getElementById('upPic').value.trim(),
+    catatan  : document.getElementById('upCatatan').value.trim()
+  }).then(function(res){
     btn.disabled = false; btn.textContent = 'Simpan';
-    if (res.success) { showToast('✓ Berhasil diupdate'); closeModal(); STATE.data = null; loadData(); }
-    else showToast(res.message, true);
-  } catch(err) {
+    if (res && res.success) { showToast('✓ Berhasil diupdate'); closeModal(); STATE.data = null; loadData(); }
+    else showToast((res && res.message) || 'Gagal', true);
+  }).catch(function(err){
     btn.disabled = false; btn.textContent = 'Simpan';
     showToast('Error: ' + err.message, true);
-  }
+  });
 }
 
-// ═══════════════════════════════════════════════════════════
-//  SAVE STATUS ACCIDENT — via fetch GET
-// ═══════════════════════════════════════════════════════════
-async function saveAccStatus(no) {
+function saveAccStatus(no) {
   var btn = document.getElementById('btnSaveAcc');
   btn.disabled = true; btn.textContent = 'Menyimpan...';
-  try {
-    var res = await apiUpdate({
-      action  : 'update_accident',
-      no      : no,
-      status  : document.getElementById('accUpStatus').value,
-      pic     : document.getElementById('accUpPic').value.trim(),
-      catatan : document.getElementById('accUpCatatan').value.trim()
-    });
+  apiUpdate({
+    action  : 'update_accident',
+    no      : no,
+    status  : document.getElementById('accUpStatus').value,
+    pic     : document.getElementById('accUpPic').value.trim(),
+    catatan : document.getElementById('accUpCatatan').value.trim()
+  }).then(function(res){
     btn.disabled = false; btn.textContent = 'Simpan';
-    if (res.success) { showToast('✓ Status diupdate'); closeModal(); STATE.accData = null; loadAccidentData(); }
-    else showToast(res.message, true);
-  } catch(err) {
+    if (res && res.success) { showToast('✓ Status diupdate'); closeModal(); STATE.accData = null; loadAccidentData(); }
+    else showToast((res && res.message) || 'Gagal', true);
+  }).catch(function(err){
     btn.disabled = false; btn.textContent = 'Simpan';
     showToast('Error: ' + err.message, true);
-  }
+  });
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -938,7 +926,7 @@ function setRkaBulan(bln) {
 }
 
 // ═══════════════════════════════════════════════════════════
-//  RENDER RKA PANEL (identik dengan versi asli)
+//  HELPERS FORMAT
 // ═══════════════════════════════════════════════════════════
 function fmtRp(n) {
   if (!n&&n!==0) return '—'; if(n===0) return '0'; n=Math.round(n);
@@ -949,6 +937,10 @@ function fmtRp(n) {
 }
 function fmtRpFull(n) { if(!n&&n!==0) return '—'; return Math.round(n).toLocaleString('id-ID'); }
 
+
+// ═══════════════════════════════════════════════════════════
+//  RENDER RKA PANEL
+// ═══════════════════════════════════════════════════════════
 function renderRkaPanel() {
   var d=STATE.rkaData; if(!d) return;
   var kpi=d.kpi, isRekap=(d.mode==='rekap');
@@ -1193,10 +1185,11 @@ function togglePKapalAcc(vKey){var head=document.querySelector('#pkapalAcc-'+vKe
 function pKapalExpandAll(){document.querySelectorAll('.pkapal-head').forEach(function(el){el.classList.add('open');});document.querySelectorAll('.pkapal-body').forEach(function(el){el.classList.add('open');});}
 function pKapalCollapseAll(){document.querySelectorAll('.pkapal-head').forEach(function(el){el.classList.remove('open');});document.querySelectorAll('.pkapal-body').forEach(function(el){el.classList.remove('open');});}
 
+
 // ═══════════════════════════════════════════════════════════
 //  PANEL LAPORAN RUTIN
 // ═══════════════════════════════════════════════════════════
-function getBulanKey(ts){var d=new Date(ts);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');}
+function getBulanKey(ts){var d=new Date(ts);var mm=String(d.getMonth()+1);if(mm.length<2)mm='0'+mm;return d.getFullYear()+'-'+mm;}
 function getBulanLabel(key){var p=key.split('-');return BULAN_ID[parseInt(p[1],10)-1]+' '+p[0];}
 
 function renderLaporanPanel(){
@@ -1349,8 +1342,8 @@ function populateFilterSelects(arr,vesselId,typeId,withType){
 }
 
 function hlText(str,q){if(!str)return'';var safe=escHtml(String(str));if(!q)return safe;var re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');return safe.replace(re,'<span class="hl">$1</span>');}
-function showToast(msg,isErr){var t=document.createElement('div');t.className='toast-fly'+(isErr?' error':'');t.textContent=msg;document.body.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transition='opacity 0.4s';},2500);setTimeout(function(){t.remove();},3200);}
-function escHtml(s){if(s===null||s===undefined)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function showToast(msg,isErr){var t=document.createElement('div');t.className='toast-fly'+(isErr?' error':'');t.textContent=msg;document.body.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transition='opacity 0.4s';},3500);setTimeout(function(){t.remove();},4200);}
+function escHtml(s){if(s===null||s===undefined)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,"\\'");}
 
 // ── INIT ──────────────────────────────────────────────────
 loadData();
