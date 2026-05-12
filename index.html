@@ -647,7 +647,7 @@
 //    Apps Script Editor → Deploy → Manage Deployments
 //    → copy URL berakhiran /exec
 // ═══════════════════════════════════════════════════════════
-var API_BASE = 'https://script.google.com/macros/s/AKfycbyhPuYBDVzxjtOs5oBUx3AdZPyDyNFWB5aZ_sJG9otI-crBLb7pZCZEpPPxfPiWpAbThA/exec';
+var API_BASE = 'https://script.google.com/macros/s/AKfycbzA-z9dP929UaS_-OPj9EE4bBb6h9iOmHWXW1Oybbk6pHw9jQsTg-D6nKNFUI1ft4Gf9w/exec';
 
 // ── Konstanta ──────────────────────────────────────────────
 var JENIS_PERMINTAAN = ["Permintaan Suku Cadang","Permintaan Perbaikan","Permintaan Permesinan","Permintaan Akomodasi","Laporan Kerusakan"];
@@ -672,9 +672,9 @@ var STATE = {
 
 // ═══════════════════════════════════════════════════════════
 //  JSONP LOADER — bypass CORS dari GitHub Pages
-//  Cara kerja: inject <script src="…?callback=cbName"></script>
+//  Cara kerja: inject script tag dengan src callback,
 //  Apps Script return: cbName({...data...});
-//  Tag <script> tidak terkena CORS, jadi bisa cross-origin.
+//  Tag script tidak terkena CORS, jadi bisa cross-origin.
 // ═══════════════════════════════════════════════════════════
 var __jsonpCounter = 0;
 function jsonpFetch(params, timeoutMs) {
